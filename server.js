@@ -3,7 +3,7 @@ let app = express();
 
 //var app = require('express')();
 let http = require('http').createServer(app);
-let io = require('socket.io')(http);
+// let io = require('socket.io')(http);
 
 
 
@@ -20,16 +20,16 @@ app.get("/test", function (request, response) {
 });
 
 //socket test
-io.on('connection', (socket) => {
-  console.log('a user connected');
-  socket.on('disconnect', () => {
-    console.log('user disconnected');
-  });
-  setInterval(()=>{
-    socket.emit('number', parseInt(Math.random()*10));
-  }, 1000);
+// io.on('connection', (socket) => {
+//   console.log('a user connected');
+//   socket.on('disconnect', () => {
+//     console.log('user disconnected');
+//   });
+//   setInterval(()=>{
+//     socket.emit('number', parseInt(Math.random()*10));
+//   }, 1000);
 
-});
+// });
 
 
 http.listen(port,()=>{
