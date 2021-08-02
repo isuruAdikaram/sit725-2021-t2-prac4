@@ -22,12 +22,12 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: #2196f3;
+  background-color: #009688;
 
 }
 
 .page-footer{
-  background-color: #2196f3;
+  background-color: #009688;
   
 }
 main {
