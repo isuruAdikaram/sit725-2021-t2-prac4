@@ -1,5 +1,5 @@
 const testButtonFunction=()=>{
-  alert('Thank you for clicking')
+  alert('Thank you for clicking, sign up button is not yet active!')
 }
 
 // connect to the socket
