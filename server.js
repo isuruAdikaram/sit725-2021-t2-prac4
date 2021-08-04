@@ -2,14 +2,17 @@ let express = require("express");
 let app = express();
 
 //var app = require('express')();
-let http = require('http').createServer(app);
+//let http = require('http').createServer(app);
 // let io = require('socket.io')(http);
+app.use(express.static(__dirname+'/public'));
+app.use(express.json());
+app.use(express.urlencoded({ extended:false}));
 
 
 
 
 
-var port = process.env.PORT || 3000;
+
 
 app.use(express.static(__dirname + '/public'));
 
@@ -31,15 +34,13 @@ app.get("/test", function (request, response) {
 
 // });
 
+var port = process.env.PORT || 3000;
 
-http.listen(port,()=>{
+app.listen(port,()=>{
   console.log("Listening on port ", port);
 });
 
-process.once('SIGTERM', function () {
-  console.log('SIGTERM received...');
-  server.close();
-});
+s
 
 //this is only needed for Cloud foundry 
 require("cf-deployment-tracker-client").track();
