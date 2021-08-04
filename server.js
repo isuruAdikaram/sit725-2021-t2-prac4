@@ -36,5 +36,10 @@ http.listen(port,()=>{
   console.log("Listening on port ", port);
 });
 
+process.once('SIGTERM', function () {
+  console.log('SIGTERM received...');
+  server.close();
+});
+
 //this is only needed for Cloud foundry 
 require("cf-deployment-tracker-client").track();
