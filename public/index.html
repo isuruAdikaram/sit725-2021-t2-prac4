@@ -37,7 +37,7 @@
           />
           <!-- notice the "circle" class -->
         </div> 
-        <a class="waves-effect waves-light btn"><i class="material-icons left">create</i>click me!</a><!--click me button-->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons left">create</i>click me!</a><!--click me button modal-->
         <div class="row" id="card-section"> 
             <div class="col s4">
                 <div class="card medium"><!-- biggining of the card --> 
@@ -75,6 +75,47 @@
           </div>
         </div>
       </div>
+      <!-- modal structure -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Modal Header</h4>
+          
+          <div class="row"><!-- form goes here -->
+            <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                <input id="title" type="text" class="validate">
+                <label for="title">Title</label>
+                </div>
+                <div class="input-field col s6">
+                <input id="image" type="text" class="validate">
+                <label for="image">Image</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="link" type="text" class="validate">
+                <label for="link">Link</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="description" type="text" class="validate">
+                <label for="description">Description</label>
+                </div>
+            </div>
+            <div class="row center">   
+                <a class="waves-effect waves-light btn" id="formSubmit">Submit</a>
+            </div>
+            </form>
+        </div><!--form ends here-->
+
+        </div>     
+      </div>
+      <!-- modal structure -->
+      
+        
+
     </main>
     <footer class="page-footer">
       <div class="footer-copyright">
